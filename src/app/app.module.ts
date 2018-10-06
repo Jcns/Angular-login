@@ -4,14 +4,20 @@ import { HttpModule } from '@angular/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { Angular2TokenService } from 'angular2-token';
+import { HomeComponent } from './home/home.component';
+import { NavbarComponent } from './navbar/navbar.component';
+import { MzNavbarModule } from 'ngx-materialize'
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HomeComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
     HttpModule,
+    MzNavbarModule,
     AppRoutingModule
   ],
   providers: [ Angular2TokenService ],
