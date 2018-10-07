@@ -1,0 +1,27 @@
+<form (ngSubmit)="onSignUpSubmit()" #f="ngForm" novalidate>
+	<div class="section">
+		<h6>Registrar</h6>
+		<div class="row">
+			<div class="input-field col s12 m6">
+				<input id="email" name="email" type="email" required [(ngModel)]="signUpUser.email">
+				<label for="email">Email</label>
+			</div>
+
+			<div class="input-field col s12 m6">
+				<input id="password" name="password" type="password" required [(ngModel)]="signUpUser.password">
+				<label for="password">Senha</label>
+			</div>
+			<div class="input-field col s12 m6">
+				<input id="password_confirmation" name="password_confirmation" type="password" required [(ngModel)]="signUpUser.passwordConfirmation">
+				 <span *ngIf="signUpUser.password != signUpUser.passwordConfirmation">
+					Digite corretamente a senha
+				</span>
+				<label for="email">Confirme sua senha</label>
+			</div>
+			<br/>	
+			
+		</div>
+	</div>
+	<button type="submit" class="btn btn-success" [disabled]="!(f.valid) || !(signUpUser.password == signUpUser.passwordConfirmation)">Cadastrar</button>
+	<button class="btn btn-dark" (click)="signUpUser = {}" type="button">Limpar</button>
+</form>
