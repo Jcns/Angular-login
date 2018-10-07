@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
+import {Angular2TokenService} from "angular2-token";
+
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -9,7 +11,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  constructor(public authTokenService:Angular2TokenService) { }
 
   ngOnInit() {
   }

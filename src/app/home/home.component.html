@@ -1,10 +1,30 @@
 <div class="container-fluid">
     <br/>
     <div class="jumbotron">
-        <h2 class="display-4">Bem vindo:</h2>
-        <h4 class="display-4">alo alo</h4>
-        <p class="lead">
-            <a class="btn btn-primary btn-lg" [routerLink]="['/login']" role="button">Voltar ao Login </a>
-        </p>
+        <h2 class="display-3"><strong>Bem vindo: {{authTokenService.currentUserData.email}}</strong></h2>
+        <h5>Seus dados foram/serão processados pela API Rest feita em Ruby on Rails (RoR)!</h5><br />
+        <h6 class="red-text">*Ver log do processamento com as requisições GET e POST</h6>         
     </div>
 </div>
+<footer class="page-footer">
+  <div class="container">
+    <div class="row">
+      <div class="col l6 s12">
+        <h5 class="white-text"><strong>Projeto Angular 6 + RoR</strong></h5>
+        <p class="grey-text text-lighten-4">Projeto desenvolvido no processo seletivo da Tracking Trade</p>
+      </div>
+      <div class="col l4 offset-l3 s12">
+        <h5 class="white-text">Links</h5>
+        <ul>
+          <li><a class="grey-text text-lighten-3" href="https://github.com/Jcns/Angular-login">Github</a></li>
+          <li><a class="grey-text text-lighten-3" href="https://www.facebook.com/jeancarlosnsilva">Facebook</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="footer-copyright">
+    <div class="container">
+    © Developed by Jean Silva
+    </div>
+  </div>
+</footer>

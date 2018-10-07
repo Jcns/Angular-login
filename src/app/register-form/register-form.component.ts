@@ -1,4 +1,3 @@
-import { MzValidationModule } from 'ngx-materialize';
 import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 import {Angular2TokenService} from "angular2-token";
 import { Router, ActivatedRoute } from '@angular/router';
@@ -20,7 +19,7 @@ export class RegisterFormComponent implements OnInit {
 
 
 	constructor(
-		private tokenAuthService: Angular2TokenService
+		private tokenAuthService: Angular2TokenService,
 		private router:Router
 	) { }
 
