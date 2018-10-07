@@ -16,6 +16,6 @@ import { CommonModule } from '@angular/common';
     FormsModule,
     LoginFormRoutingModule
   ],
-  providers: [ Angular2TokenService ]
+  providers: [ ]
 })
 export class LoginFormModule { }
